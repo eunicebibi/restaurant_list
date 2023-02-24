@@ -35,6 +35,10 @@ app.get('/', (req, res) => {
   res.render('index', { restaurants: restaurantList.results });
 })
 
+app.get('/restaurants/new', (req, res) => {
+  return res.render('new')
+})
+
 //querystring  
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword
