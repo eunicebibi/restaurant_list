@@ -1,6 +1,6 @@
-<h4 class="mb-2" >新增餐廳</h4>
+<h4 class="mb-2">新增餐廳</h4>
 {{!-- 這裡記得添加action及method --}}
-<form action="/restaurants" method="POST" class="row g-3"> 
+<form action="/restaurants" method="POST" class="row g-3">
   <div class="col-md-6">
     <label for="name" class="form-label">店名</label>
     {{!-- 請記得name="name" 及是否required --}}
@@ -11,16 +11,16 @@
     <input type="text" class="form-control" id="name_en" placeholder="請輸入英文店名" name="name_en">
   </div>
   <div class="col-md-4">
-      <label for="category" class="form-label">餐廳種類</label>
-      <select id="category" class="form-select">
-        <option selected>Choose...</option>
-        <option>日式料理</option>
-        <option>泰式料理</option>
-        <option>義式料理</option>
-        <option>中東料理</option>
-        <option>美式餐廳</option>
-        <option>咖啡店</option>
-      </select>
+    <label for="category" class="form-label">餐廳種類</label>
+    <select id="category" class="form-select">
+      <option selected>選擇餐廳種類</option>
+      <option>日式料理</option>
+      <option>泰式料理</option>
+      <option>義式料理</option>
+      <option>中東料理</option>
+      <option>美式餐廳</option>
+      <option>咖啡店</option>
+    </select>
   </div>
   <div class="col-12">
     <label for="image" class="form-label">餐廳照片</label>
@@ -29,7 +29,7 @@
   </div>
   <div class="col-12">
     <label for="location" class="form-label">餐廳地址</label>
-    <input type="text" class="form-control" id="location" placeholder="如 新北市樹林區123巷45號" name="location"required>
+    <input type="text" class="form-control" id="location" placeholder="如 新北市樹林區123巷45號" name="location" required>
   </div>
   <div class="col-md-6">
     <label for="google_map" class="form-label">Google地圖</label>
@@ -44,7 +44,8 @@
 
   <div class="col-12">
     <button type="submit" class="btn btn-primary">新增餐廳</button>
-    <a href="/"></a>
-    <button type="submit" class="btn btn-primary">返回首頁</button>
+    <a href="/">
+      <button type="button" class="btn btn-primary">返回首頁</button>
+    </a>
   </div>
 </form>

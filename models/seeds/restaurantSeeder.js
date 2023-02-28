@@ -14,7 +14,11 @@ db.on('error', () => {
 db.once('open', () => {
   for (let i = 0; i < 8; i++) {
     Restaurant.create(restaurantList)
-  
+      .then(() => {
+        console.log("restaurantSeeder done!")
+        db.close()
+      })
+      .catch(err => console.log(err))
   }
   console.log('done')
 })
