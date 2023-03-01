@@ -91,11 +91,25 @@ app.get('/restaurants/:id/edit', (req, res) => {
 })
 
 // Update(PUT)
-app.put("/restaurants/:id", (req, res) => {
+app.post("/restaurants/:id/edit", (req, res) => {
   const id = req.params.id
-  return Restaurant.findByIdAndUpdate(id, req.body)
+  const name = req.body.name
+  return Restaurant.findById(id)
+    .then(restaurantsData => {
+      restaurantsData.name = name
+      return restaurantsData.save()
+    })
     .then(() => res.redirect(`/restaurants/${id}`))
-    .catch(err => console.log(err))
+    .catch(error => console.log(error))
+})
+
+// Delete
+app.post("/restaurants/:id/delete", (req, res) => {
+  const id = req.params.id
+  return Restaurant.findById(id)
+    .then(restaurantsData => restaurantsData.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
 })
 
 // start and listen on the Express server

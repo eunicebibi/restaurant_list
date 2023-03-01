@@ -1,7 +1,7 @@
 <h4 class="mb-2">修改資料 - {{restaurantsData.name}}</h4>
 {{!-- 這裡記得添加action及method --}}
 <div class="container">
-  <form action="/restaurants/{{restaurantsData.id}}?_method=PUT" method="POST">
+  <form action="/restaurants/{{restaurantsData._id}}/edit" method="POST">
     <div class="mb-3">
       <label for="name" class="form-label">店名<span class="text-danger">*</span></label>
       {{!-- 請記得name="name" 及是否required --}}
