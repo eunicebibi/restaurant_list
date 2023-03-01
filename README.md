@@ -1,7 +1,12 @@
 # restaurant_list
 
 ## Introduce
-A web about my favorite restaurants. You can check their address, description and phone number in here.
+A web about my favorite restaurants. 
+Here are the functions:
+1.Check their details, like address, rating or phone number etc..
+2.You can search restaurant from keyword.
+3.You can add new restaurant.
+4.You can delete restaurant.
 
 ## Getting Started
 1.Make sure Node.js and npm has already installed.
