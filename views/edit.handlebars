@@ -5,15 +5,18 @@
     <div class="mb-3">
       <label for="name" class="form-label">店名<span class="text-danger">*</span></label>
       {{!-- 請記得name="name" 及是否required --}}
-      <input type="text" class="form-control" id="name" placeholder="請輸入中文店名" name="name" value="{{restaurantsData.name}}" required>
+      <input type="text" class="form-control" id="name" placeholder="請輸入中文店名" name="name"
+        value="{{restaurantsData.name}}" required>
     </div>
     <div class="col-md-6">
       <label for="name_en" class="form-label">英文店名<span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="name_en" placeholder="請輸入英文店名" name="name_en" value="{{restaurantsData.name_en}}" required>
+      <input type="text" class="form-control" id="name_en" placeholder="請輸入英文店名" name="name_en"
+        value="{{restaurantsData.name_en}}" required>
     </div>
     <div class="col-md-4">
       <label for="category" class="form-label">餐廳種類<span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="category" placeholder="美式" name="category" value="{{restaurantsData.category}}" required />
+      <input type="text" class="form-control" id="category" placeholder="美式" name="category"
+        value="{{restaurantsData.category}}" required />
     </div>
     <div class="col-12">
       <label for="image" class="form-label">餐廳照片<span class="text-danger">*</span></label>
@@ -22,25 +25,30 @@
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">電話<span class="text-danger">*</span></label>
-      <input type="tel" class="form-control" id="phone" placeholder="04-23456789" name="phone" value="{{restaurantsData.phone}}" required />
+      <input type="tel" class="form-control" id="phone" placeholder="04-23456789" name="phone"
+        value="{{restaurantsData.phone}}" required />
     </div>
     <div class="col-12">
       <label for="location" class="form-label">餐廳地址<span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="location" placeholder="如 新北市樹林區123巷45號" name="location" value="{{restaurantsData.location}}" required>
+      <input type="text" class="form-control" id="location" placeholder="如 新北市樹林區123巷45號" name="location"
+        value="{{restaurantsData.location}}" required>
     </div>
     <div class="col-md-6">
       <label for="google_map" class="form-label">Google地圖<span class="text-danger">*</span></label>
-      <input type="url" class="form-control" id="google_map" name="google_map" value="{{restaurantsData.google_map}}"required>
+      <input type="url" class="form-control" id="google_map" name="google_map" value="{{restaurantsData.google_map}}"
+        required>
     </div>
 
     <div class="col-md-2">
       <label for="rating" class="form-label">評分<span class="text-danger">*</span></label>
       {{!-- number可以設定min max step --}}
-      <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" step="0.5" value="{{restaurantsData.rating}}" required>
+      <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" step="0.5"
+        value="{{restaurantsData.rating}}" required>
     </div>
     <div class="col-md-6">
       <label for="description" class="form-label">詳細敘述<span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="description" placeholder="請敘述餐廳特色" name="description" value="{{restaurantsData.description}}">
+      <input type="text" class="form-control" id="description" placeholder="請敘述餐廳特色" name="description"
+        value="{{restaurantsData.description}}">
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary">
