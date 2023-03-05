@@ -93,10 +93,10 @@ app.get('/restaurants/:id/edit', (req, res) => {
 // Update(PUT)
 app.post("/restaurants/:id/edit", (req, res) => {
   const id = req.params.id
-  const name = req.body.name
+  const editData = req.body
   return Restaurant.findById(id)
     .then(restaurantsData => {
-      restaurantsData.name = name
+      restaurantsData.set(editData)
       return restaurantsData.save()
     })
     .then(() => res.redirect(`/restaurants/${id}`))
