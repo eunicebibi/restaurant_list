@@ -50,7 +50,7 @@
 
         <a href="/restaurants/{{restaurantsData._id}}/edit"><button class="btn btn-outline-secondary">修改</button></a>
         <a href="/"><button class="btn btn-outline-primary">回到首頁</button></a>
-        <form action="/restaurants/{{restaurantsData._id }}/delete" method="POST" style="display: inline;">
+        <form action="/restaurants/{{restaurantsData._id }}?_method=DELETE" method="POST" style="display: inline;">
           <button type="submit" class="btn btn-outline-danger">刪除餐廳</button>
         </form>
     </div>
