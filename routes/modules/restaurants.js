@@ -24,7 +24,6 @@ router.get('/:id', (req, res) => {
 })
 
 
-
 //Edit
 router.get('/:id/edit', (req, res) => {
   const id = req.params.id
@@ -43,7 +42,7 @@ router.put("/:id", (req, res) => {
       restaurantsData.set(editData)
       return restaurantsData.save()
     })
-    .then(() => res.redirect(`/res${id}`))
+    .then(() => res.redirect(`/restaurants/${id}`))
     .catch(error => console.log(error))
 })
 
