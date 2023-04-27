@@ -1,12 +1,16 @@
 // require packages used in the project
 const express = require('express')
 const session = require('express-session')
-const port = 3000
+
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const flash = require('connect-flash') 
 // 引用路由器
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+const port = process.env.PORT
 const routes = require('./routes')
 // 載入設定檔，要寫在 express-session 以後
 const usePassport = require('./config/passport')
@@ -19,7 +23,7 @@ app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.use(session({
-  secret: 'ThisIsMySecret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))
